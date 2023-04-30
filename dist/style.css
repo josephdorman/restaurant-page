@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'BlenderProBold';
+  src: url(./fonts/BlenderPro-Bold.woff2);
+}
+
+@font-face {
+  font-family: 'BlenderPro';
+  src: url(./fonts/BlenderPro-Book.woff2);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: 'BlenderProBold';
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #fcee09;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.nav li button{
+  background-color: #fcee09;
+  border: none;
+  font-family: 'BlenderProBold';
+  font-size: 32px;
+}
