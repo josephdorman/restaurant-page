@@ -21,6 +21,10 @@ function makeHeader() {
     menuBtn.textContent = 'Menu';
     contactBtn.textContent = 'Contact';
 
+    homeBtn.setAttribute('id', 'home');
+    menuBtn.setAttribute('id', 'menu');
+    contactBtn.setAttribute('id', 'contact');
+
     home.appendChild(homeBtn);
     menu.appendChild(menuBtn);
     contact.appendChild(contactBtn);
