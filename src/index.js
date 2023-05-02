@@ -1,4 +1,5 @@
 import makeHome from './home';
+import makeMenu from './menu';
 
 function screenController () {
 
@@ -11,7 +12,7 @@ function screenController () {
       clickHandler();
     }
     else if (btnID === 'menu') {
-      console.log('menu');
+      makeMenu();
       clickHandler();
     }
     else {
@@ -36,6 +37,6 @@ function screenController () {
 }
 
 // initial load of home and buttons
-makeHome();
+//makeHome();
 
-screenController();
+//screenController();

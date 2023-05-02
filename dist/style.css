@@ -64,6 +64,18 @@ body {
   background-size: cover;
 }
 
+.body-menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background-image: url(./assets/bg-about-1440-c951e0d3.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
 .gradient {
   height: 50px;
   width: 100%;
@@ -80,6 +92,96 @@ body {
   width: 846px;
   height: 202px;
   color: #D6E6A5;
+}
+
+.custom-border {
+  --border-width: .25em;
+  --edge-size: 1.5em;
+
+  position: relative;
+  isolation: isolate;
+
+  clip-path: 
+    polygon(
+      /* top-left 1 */
+      var(--edge-size) 0%,
+      /* top-left 2 */ 
+      100% 0,
+      /* top-right */ 
+      100% calc(100% - var(--edge-size)), 
+      /* bottom-right 1 */
+      calc(100% - var(--edge-size)) 100%,
+      /* bottom-right 2 */ 
+      0 100%, 
+      /* bottom-left */
+      0% var(--edge-size)
+    );
+
+
+}
+
+.custom-border::before,
+.custom-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.custom-border::before {
+  background-color: #fcee09;
+  z-index: -2;
+}
+
+.custom-border::after {
+  background-color: black;
+  z-index: -1;
+
+  clip-path: 
+    polygon(
+      /* top-left 1 */
+      calc(var(--edge-size) + var(--border-width) * .5)
+      var(--border-width),
+      /* top-left 2 */ 
+      calc(100% - var(--border-width))
+      var(--border-width),
+      /* top-right */ 
+      calc(100% - var(--border-width))
+      calc(100% - var(--border-width) - calc(var(--edge-size) + var(--border-width) * 0.1)), 
+      /* bottom-right 1 */
+      calc(100% - var(--border-width) - calc(var(--edge-size) + var(--border-width) * 0.1))
+      calc(100% - var(--border-width)),
+      /* bottom-right 2 */ 
+      var(--border-width)
+      calc(100% - var(--border-width)), 
+      /* bottom-left */
+      var(--border-width)
+      calc(var(--edge-size) + var(--border-width) * .5)
+    );
+
+}
+
+.card-wrapper {
+  text-align: center;
+  
+  padding: 20px 20px;
+  height: 90%;
+  width: 95%;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  color: #fcee09;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px
+}
+
+.card p:nth-child(1) {
+  font-size: 24px;
+  font-family: 'BlenderProBold';
 }
 
 .footer {

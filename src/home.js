@@ -80,3 +80,4 @@ function makeHome() {
 }
 
 export default makeHome;
+export {makeHeader, makeFooter};
