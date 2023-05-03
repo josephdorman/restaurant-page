@@ -18,9 +18,18 @@ function getDrink () {
   const drinkList = () => {
     const drink1 = drink('Johnny Silverhand', './assets/alchohol1.png', '"A tequila old fashioned with a splash of beer and a chili garnish. For the ', 'rockerboy', ' who never gave up."');
     const drink2 = drink('David Martinez', './assets/alchohol2.png', '"A shot of vodka on the rocks, topped with ', 'NiCola', '. Aim high and go out with a bang."');
+    const drink3 = drink('Jackie Wells', './assets/alchohol3.png', '"A shot of vodka on the rocks, topped with ', 'NiCola', '. Aim high and go out with a bang."');
+    const drink4 = drink('Calavera Feliz', './assets/alchohol4.png', '"Feista? ', 'Calavera', '."');
+    const drink5 = drink('Sake Utagawa', './assets/alchohol5.png', '"The ', 'perfect', ' gift to yourself."');
+    const drink6 = drink('Blue Grass', './assets/alchohol6.png', '"Perfect for ', 'drowning', ' sorrows, fears and an uninteresting past."');
+
 
     drinkMenu.push(drink1);
     drinkMenu.push(drink2);
+    drinkMenu.push(drink3);
+    drinkMenu.push(drink4);
+    drinkMenu.push(drink5);
+    drinkMenu.push(drink6);
   }
 
   drinkList();
@@ -35,6 +44,9 @@ function makeBody () {
   console.log(menu.getMenu().length);
 
   const content = document.querySelector('.content');
+
+  content.style.height = '100%';
+
   const menuBody = document.createElement('div');
   const cardWrapper = document.createElement('div');
 

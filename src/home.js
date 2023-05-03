@@ -42,6 +42,9 @@ function makeHeader() {
 
 function makeBody() {
   const content = document.querySelector('.content');
+
+  content.style.height = '100vh';
+
   const body = document.createElement('div');
 
   body.classList.add('body');
