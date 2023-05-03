@@ -21,7 +21,9 @@ function getDrink () {
     const drink3 = drink('Jackie Wells', './assets/alchohol3.png', '"A shot of vodka on the rocks, topped with ', 'NiCola', '. Aim high and go out with a bang."');
     const drink4 = drink('Calavera Feliz', './assets/alchohol4.png', '"Feista? ', 'Calavera', '."');
     const drink5 = drink('Sake Utagawa', './assets/alchohol5.png', '"The ', 'perfect', ' gift to yourself."');
-    const drink6 = drink('Blue Grass', './assets/alchohol6.png', '"Perfect for ', 'drowning', ' sorrows, fears and an uninteresting past."');
+    const drink6 = drink('Paul Night', './assets/alchohol6.png', '"A ', 'favorite', ' drink among artists and dreamers."');
+    const drink7 = drink('Blue Grass', './assets/alchohol7.png', '"Perfect for ', 'drowning', ' sorrows, fears and uninteresting pasts."');
+    const drink8 = drink('La Perle des Alpes', './assets/alchohol8.png', '"Quality doesnt ', 'cut', ' corners."');
 
 
     drinkMenu.push(drink1);
@@ -30,6 +32,8 @@ function getDrink () {
     drinkMenu.push(drink4);
     drinkMenu.push(drink5);
     drinkMenu.push(drink6);
+    drinkMenu.push(drink7);
+    drinkMenu.push(drink8);
   }
 
   drinkList();
