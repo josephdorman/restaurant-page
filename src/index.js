@@ -37,6 +37,6 @@ function screenController () {
 }
 
 // initial load of home and buttons
-//makeHome();
+makeHome();
 
-//screenController();
+screenController();
