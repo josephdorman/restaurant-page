@@ -32,6 +32,7 @@ function makeBody () {
   const menu = getDrink();
 
   console.table(menu.getMenu()[0].getName());
+  console.log(menu.getMenu().length);
 
   const content = document.querySelector('.content');
   const menuBody = document.createElement('div');
@@ -40,56 +41,72 @@ function makeBody () {
   menuBody.classList.add('body-menu');
   cardWrapper.classList.add('card-wrapper');
 
+  content.appendChild(menuBody);
+  menuBody.appendChild(cardWrapper);
+
   const makeDrinks = () => {
 
+    for (let i = 0; i < menu.getMenu().length; i++) {
+      // create card
+      const card = document.createElement('div');
 
+      card.classList.add('card');
+      card.classList.add('custom-border');
 
-    /*
-    const card1 = document.createElement('div');
+      // create title/name
+      const cardName = document.createElement('h2');
+      cardName.textContent = menu.getMenu()[i].getName();
 
-    card1.classList.add('card');
-    card1.classList.add('custom-border');
+      // create drink image
+      const cardImage = document.createElement('img');
+      cardImage.setAttribute('src', `${menu.getMenu()[i].getImage()}`);
 
-    const card1Name = document.createElement('h2');
-    card1Name.textContent = 'Johnny Silverhand';
+      // create drink description element
+      const cardDescription = document.createElement('div');
+      cardDescription.classList.add('drink-description');
 
-    const card1Image = document.createElement('img');
-    card1Image.setAttribute('src', './assets/alchohol1.png');
+      // create drink description child
+      const cardPar = document.createElement('p');
 
-    const card1Description = document.createElement('div');
-    card1Description.classList.add('drink-description');
+      // em child for first and last part
+      const cardEm = document.createElement('em');
+      const cardEm2 = document.createElement('em');
 
-    const card1Par = document.createElement('p');
-    const card1Em = document.createElement('em');
-    const card1Em2 = document.createElement('em');
+      // create first and last elements
+      cardEm.textContent = menu.getMenu()[i].getFirstPart();
+      cardEm2.textContent = menu.getMenu()[i].getLastPart();
 
-    const card1Highlight = document.createElement('span');
-    const card1HighlightEm = document.createElement('em');
-    card1Highlight.setAttribute('id', 'highlight');
-    card1HighlightEm.textContent = 'rockerboy';
-    card1Highlight.appendChild(card1HighlightEm);
+      // elements for highlighted blue text
+      const cardHighlightEm = document.createElement('em');
+      const cardHighlight = document.createElement('span');
 
-    card1Em.textContent = 'A tequila old fashioned with a splash of beer and a chili garnish. For the ';
-    card1Em2.textContent = ' who never gave up';
+      // make highlighted element
+      cardHighlight.setAttribute('id', 'highlight');
+      cardHighlightEm.textContent = menu.getMenu()[i].getHightlight();
+      cardHighlight.appendChild(cardHighlightEm);
 
-    card1Par.appendChild(card1Em);
-    card1Par.appendChild(card1Highlight);
-    card1Par.appendChild(card1Em2);
+      // append first part, highlighted text, last part in order to p element
+      cardPar.appendChild(cardEm);
+      cardPar.appendChild(cardHighlight);
+      cardPar.appendChild(cardEm2);
 
-    card1Description.appendChild(card1Par);
+      // append to finish making description
+      cardDescription.appendChild(cardPar);
 
-    card1.appendChild(card1Name);
-    card1.appendChild(card1Image);
-    card1.appendChild(card1Description);
+      // append name, image, and description to actual card
+      card.appendChild(cardName);
+      card.appendChild(cardImage);
+      card.appendChild(cardDescription);
 
-    cardWrapper.appendChild(card1);
-    */
+      // finally append the actual finished card to the wrapper
+      cardWrapper.appendChild(card);
+    
+
+    }
+    
   }
 
   makeDrinks();
-
-  menuBody.appendChild(cardWrapper);
-  content.appendChild(menuBody);
 
 }
 
