@@ -24,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: black;
 }
 
@@ -77,6 +77,20 @@ body {
   background-image: url(./assets/bg-about-1440-c951e0d3.jpg);
   background-position: center;
   background-size: cover;
+}
+
+.body-contact {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+/*
+  background-image: url(./assets/afterlife.jpg);
+  background-position: center;
+  background-size: cover;
+  */
 }
 
 .gradient {
@@ -209,6 +223,59 @@ body {
 
 #highlight {
   color: var(---secondary-color);
+}
+
+.about-container {
+  display: flex;
+  width: 1200px;
+  padding: 50px;
+  gap: 40px;
+}
+
+.about-us h2 {
+  font-family: 'BlenderProBold';
+  font-size: 42px;
+  background: url('./assets/detail-bottom.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-position-x: left;
+  color: var(---primary-color);
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  font-size: 22px;
+}
+
+.seperator {
+  background: url('./assets/separator-cyan.svg');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30px;
+}
+
+.detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  width: 60%;
+  height: 300px;
+  justify-items: center;
+  color: white;
+}
+
+.detail-container h1 {
+  grid-row: 1;
+  grid-column: 1/-1;
+}
+
+.location,
+.hours,
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .footer {
