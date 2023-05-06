@@ -232,7 +232,8 @@ body {
   gap: 40px;
 }
 
-.about-us h2 {
+.about-us h2,
+.contact-us h2 {
   font-family: 'BlenderProBold';
   font-size: 42px;
   background: url('./assets/detail-bottom.svg');
@@ -281,8 +282,6 @@ body {
   margin-bottom: 10px;
 }
 
-
-
 input[type='text'],
 input[type='email'] {
   font-family: 'BlenderProBold';
@@ -309,17 +308,24 @@ input[type='submit'] {
   width: 150px;
 }
 
+.contact-us {
+  display: flex;
+  justify-content: center;
+  padding: 80px 50px;
+  width: 1200px;
+}
+
 .detail-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 3fr;
-  width: 60%;
+  width: 100%;
   height: 300px;
   justify-items: center;
   color: white;
 }
 
-.detail-container h1 {
+.detail-container h2 {
   grid-row: 1;
   grid-column: 1/-1;
 }
@@ -330,7 +336,15 @@ input[type='submit'] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
+  font-size: 18px;
   gap: 10px;
+}
+
+.location h3,
+.hours h3,
+.contact h3 {
+  font-size: 32px;
 }
 
 .footer {
