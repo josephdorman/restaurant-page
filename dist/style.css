@@ -330,9 +330,7 @@ input[type='submit'] {
   grid-column: 1/-1;
 }
 
-.location,
-.hours,
-.contact {
+.legend {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -341,9 +339,7 @@ input[type='submit'] {
   gap: 10px;
 }
 
-.location h3,
-.hours h3,
-.contact h3 {
+.legend h3 {
   font-size: 32px;
 }
 

@@ -1,5 +1,6 @@
 import makeHome from './home';
 import makeMenu from './menu';
+import makeContact from './contact';
 
 function screenController () {
 
@@ -16,7 +17,7 @@ function screenController () {
       clickHandler();
     }
     else {
-      console.log('contact');
+      makeContact();
       clickHandler();
     }
     
@@ -37,6 +38,6 @@ function screenController () {
 }
 
 // initial load of home and buttons
-//makeHome();
+makeHome();
 
-//screenController();
+screenController();
